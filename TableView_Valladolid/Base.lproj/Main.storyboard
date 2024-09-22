@@ -39,6 +39,7 @@
                     <navigationItem key="navigationItem" id="fnp-i7-vJN"/>
                     <connections>
                         <outlet property="Tabla" destination="7oA-V5-g4u" id="Kjd-Z1-oWk"/>
+                        <segue destination="U1I-7D-odP" kind="show" identifier="pantallaDosSegue" id="BVE-tY-LEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,9 +53,22 @@
                     <view key="view" contentMode="scaleToFill" id="KFm-se-T1K">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pantalla 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-Al-Mbr">
+                                <rect key="frame" x="159" y="394" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g7u-Nv-fdm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YQL-gW-sOM"/>
+                    <connections>
+                        <outlet property="labelTitulo" destination="Kfd-Al-Mbr" id="AgV-AN-tJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MN-9Z-yi3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

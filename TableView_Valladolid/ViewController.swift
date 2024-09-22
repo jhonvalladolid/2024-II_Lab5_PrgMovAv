@@ -18,6 +18,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Tabla.delegate = self
     }
     
+    // Implementar la función prepare para pasar datos al segundo ViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pantallaDosSegue" {
+            let idrecursoRecibido = sender as! Int
+            let pantalla2 = segue.destination as! ViewController2
+            pantalla2.recursoRecibido = contenidoCeldas[idrecursoRecibido]
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contenidoCeldas.count
     }
@@ -29,7 +38,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hizo clic en la fila: \(indexPath.row)")
+        let recursoSeleccionado = indexPath.row
+        self.performSegue(withIdentifier: "pantallaDosSegue", sender: recursoSeleccionado)
     }
 
     
