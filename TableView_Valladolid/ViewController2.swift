@@ -9,14 +9,27 @@ import UIKit
 
 class ViewController2: UIViewController {
 
-    @IBOutlet weak var labelTitulo: UILabel!
+    @IBOutlet var vistaWeb: UIWebView!
     var recursoRecibido: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mostrarRecurso()
+    }
 
-        // Asignar el valor del recurso recibido al texto del label
-        labelTitulo.text = recursoRecibido ?? "Sin recurso"
+    func mostrarRecurso() {
+        guard let recurso = recursoRecibido else {
+            print("No se ha recibido un recurso válido.")
+            return
+        }
+
+        if let direccionRecurso = Bundle.main.path(forResource: recurso, ofType: "pdf", inDirectory: "RECURSOS") {
+            let url = URL(fileURLWithPath: direccionRecurso)
+            let request = URLRequest(url: url)
+            vistaWeb.loadRequest(request)
+        } else {
+            print("El recurso \(recurso) no se encontró.")
+        }
     }
 
 }

@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,24 +49,14 @@
         <scene sceneID="pup-fK-hVX">
             <objects>
                 <viewController id="U1I-7D-odP" customClass="ViewController2" customModule="TableView_Valladolid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KFm-se-T1K">
+                    <webView key="view" contentMode="scaleToFill" id="W9c-Q9-CnT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pantalla 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-Al-Mbr">
-                                <rect key="frame" x="159" y="394" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="g7u-Nv-fdm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
                     <navigationItem key="navigationItem" id="YQL-gW-sOM"/>
                     <connections>
-                        <outlet property="labelTitulo" destination="Kfd-Al-Mbr" id="AgV-AN-tJZ"/>
+                        <outlet property="vistaWeb" destination="W9c-Q9-CnT" id="X1B-p6-12P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MN-9Z-yi3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
